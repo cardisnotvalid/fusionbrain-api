@@ -38,7 +38,7 @@ class FusionBrainAI(SyncAPIClient):
         model_id: int = 4,
         width: int = 1024,
         height: int = 1024,
-    ) -> str:
+    ) -> GenerateModel:
         params = {
             "type": "GENERATE",
             "numImages": 1,
