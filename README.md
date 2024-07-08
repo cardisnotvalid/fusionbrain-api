@@ -73,7 +73,7 @@ SECRET_KEY = "SECRET_KEY"
 prompt = "Нарисованный кистью и красками рисунок природы, море, горы, сосны, спокойные цвета"
 
 async def main() -> None:
-    async with FusionBrainAI(API_KEY, SECRET_KEY) as fusion_brain:
+    async with AsyncFusionBrainAI(API_KEY, SECRET_KEY) as fusion_brain:
         generate = await fusion_brain.generate(prompt)
         result = await fusion_brain.wait_generation(generate.uuid)
 
