@@ -77,7 +77,9 @@ async def main() -> None:
         generate = await fusion_brain.generate(prompt)
         result = await fusion_brain.wait_generation(generate.uuid)
 
-save_image_b64(result.image, "image.png")
+    save_image_b64(result.image, "image.png")
+
+asyncio.run(main())
 ```
 
 ## Лицензия
